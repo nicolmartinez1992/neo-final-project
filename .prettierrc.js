@@ -6,6 +6,6 @@ module.exports = {
   semi: true,
   singleQuote: true,
   endOfLine: 'auto',
-  importOrderSeparation: true,
-  importOrderSortSpecifiers: true
+  importOrderSeparation: false,
+  importOrderSortSpecifiers: false
 };

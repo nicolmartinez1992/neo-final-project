@@ -1,0 +1,8 @@
+@import "../../theme/index.scss";
+
+.button {
+    background-color: blue;
+    &--secondary {
+        background-color: $color-secondary;
+    }
+}

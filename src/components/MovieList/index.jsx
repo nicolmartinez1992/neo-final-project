@@ -1,16 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useOutletContext } from 'react-router-dom';
-
+import './styles.scss';
 import Movie from 'Components/Movie';
 import movieType from 'Data/shapes';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useOutletContext } from 'react-router-dom';
 
-import './styles.scss';
-
-const MovieList = ({
-  movies = [],
-  isFavoritesPage = false,
-}) => {
+const MovieList = ({ movies = [], isFavoritesPage = false }) => {
   const [favorites, setFavorites] = useOutletContext();
 
   const removeFromFavorites = (movieIndex) => {
@@ -27,8 +22,8 @@ const MovieList = ({
 
   return (
     <div className="movie-list">
-      {moviesList.length
-        ? moviesList.map((movie) => (
+      {moviesList.length ? (
+        moviesList.map((movie) => (
           <Movie
             key={movie.id}
             movie={movie}
@@ -36,13 +31,14 @@ const MovieList = ({
             removeFromFavorites={removeFromFavorites}
             addToFavorites={addToFavorites}
           />
-        )) : (
-          <div className="movie-list__empty">
-            {isFavoritesPage
-              ? 'Go to the Home Page to add some movies!'
-              : 'No movies found.'}
-          </div>
-        )}
+        ))
+      ) : (
+        <div className="movie-list__empty">
+          {isFavoritesPage
+            ? 'Go to the Home Page to add some movies!'
+            : 'No movies found.'}
+        </div>
+      )}
     </div>
   );
 };

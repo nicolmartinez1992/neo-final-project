@@ -1,17 +1,12 @@
-import React from 'react';
-
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
-
-import { ROUTES } from 'Data/constants';
-
+import './styles.scss';
+import Layout from 'Components/Layout';
+import ErrorPage from 'Containers/ErrorPage';
+import Favorites from 'Containers/Favorites';
 import Home from 'Containers/Home';
 import MovieView from 'Containers/MovieView';
-import Favorites from 'Containers/Favorites';
-import ErrorPage from 'Containers/ErrorPage';
-
-import Layout from 'Components/Layout';
-
-import './styles.scss';
+import { ROUTES } from 'Data/constants';
+import React from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 const App = () => (
   <BrowserRouter>

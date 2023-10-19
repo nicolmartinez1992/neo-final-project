@@ -46,6 +46,10 @@
       2,
       "always-multiline"
     ],
+    "linebreak-style": [
+      0,
+      "crlf"
+    ],
     "import/no-duplicates": 0,
     "import/imports-first": 0,
     "import/newline-after-import": 0,

@@ -1,9 +1,8 @@
 // TopBar.js
+import './styles.scss';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
-import './styles.scss';
 
 const TopBar = ({ logo, routes }) => (
   <header className="top-bar">
@@ -20,8 +19,9 @@ const TopBar = ({ logo, routes }) => (
           <li key={label}>
             <NavLink
               to={route}
-              className={({ isActive }) => isActive && 'top-bar__active'}
-            >
+              className={({ isActive }) =>
+                isActive && 'top-bar__active'
+              }>
               {label}
             </NavLink>
           </li>
@@ -32,14 +32,13 @@ const TopBar = ({ logo, routes }) => (
 );
 
 TopBar.propTypes = {
-  logo: PropTypes.oneOfType(
-    [PropTypes.string, PropTypes.element]
-  ).isRequired,
+  logo: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+    .isRequired,
   routes: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       route: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 
