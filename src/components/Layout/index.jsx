@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import TopBar from 'Components/TopBar';
 import logo from 'Assets/logo.png';
 
-import './styles.scss';
+import './styles.scss'; 
 
 const Layout = () => {
   const [favorites, setFavorites] = useState([]);
