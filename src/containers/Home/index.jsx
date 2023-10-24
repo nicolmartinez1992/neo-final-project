@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react';
-
-import MovieList from 'Components/MovieList';
-
-import getMovies from 'Api/movies';
-
 import './styles.scss';
+import { getMovies } from 'Api/movies';
+import MovieList from 'Components/MovieList';
+import React, { useEffect, useState } from 'react';
 
 const Home = () => {
   const [movieList, setMovieList] = useState([]);

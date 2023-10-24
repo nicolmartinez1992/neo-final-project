@@ -1,12 +1,10 @@
 // Movie.js
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-
+import './styles.scss';
 import CustomButton from 'Components/CustomButton';
 import movieType from 'Data/shapes';
-
-import './styles.scss';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Movie = ({
   movie,
@@ -14,27 +12,28 @@ const Movie = ({
   removeFromFavorites,
   addToFavorites,
 }) => {
-  const {
-    id,
-    image,
-    releaseYear,
-    title,
-  } = movie;
+  const { id, image, releaseYear, title } = movie;
 
   const favoriteIndex = favorites?.findIndex((fav) => fav.id === id);
-  const isFavorite = Number.isInteger(favoriteIndex) && favoriteIndex !== -1;
+  const isFavorite =
+    Number.isInteger(favoriteIndex) && favoriteIndex !== -1;
 
   return (
     <Link className="movie" to={`/movies/${id}`}>
-      <img src={image} alt={title} />
+      <img
+        src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+        alt={title}
+      />
       <h3 className="movie__title">{title}</h3>
       <p className="movie__year">{releaseYear}</p>
       <CustomButton
         name={`${isFavorite ? '- Remove' : '+ Add'}`}
         type={isFavorite ? 'secondary' : 'primary'}
-        onClick={() => isFavorite
-          ? removeFromFavorites(favoriteIndex)
-          : addToFavorites(movie)}
+        onClick={() =>
+          isFavorite
+            ? removeFromFavorites(favoriteIndex)
+            : addToFavorites(movie)
+        }
       />
     </Link>
   );
