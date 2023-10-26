@@ -25,9 +25,8 @@ import Login from 'Components/login';
 const App = () => (
   <BrowserRouter>
     <Routes>
-      <Route path={ROUTES.home} element={<Home />}>
-        <Route path={ROUTES.login} element={<Login />}></Route>
-      </Route>
+      <Route path={ROUTES.home} element={<Home />} />
+      <Route path={ROUTES.login} element={<Login />} />
     </Routes>
   </BrowserRouter>
 );

@@ -1,12 +1,11 @@
 import React from 'react';
+import Login from 'Components/login';
 
 import './index.scss';
 
 const Home = () => (
   <div className="home">
-    <h1>
-      Welcome to the Home Page of the React Bootcamp App
-    </h1>
+    <h1>hola</h1>
   </div>
 );
 

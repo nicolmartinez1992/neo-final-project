@@ -1,0 +1,48 @@
+.login-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(218, 81, 104);
+    text-align: center;
+}
+
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(246, 219, 223);
+}
+
+.login-container__border{
+    width: 400px; 
+    border-style: double;
+    border-color: rgb(218, 81, 104);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    margin-bottom: 20px;
+}
+
+input {
+    border: solid rgb(218, 81, 104) 1px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.login-button {
+    border: none;
+    background-color: rgb(218, 81, 104);
+    padding: 5px;
+    border-radius: 2px;
+    color: white;
+}
