@@ -1,11 +1,10 @@
 import React from 'react';
-import Login from 'Components/login';
-
 import './index.scss';
+import Products from 'Components/ProductsList';
 
 const Home = () => (
   <div className="home">
-    <h1>hola</h1>
+    <Products />
   </div>
 );
 

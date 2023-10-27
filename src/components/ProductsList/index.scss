@@ -1,0 +1,15 @@
+.container {
+    background-color: rgb(220, 219, 219);
+    text-align: center;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px 20px 0px 20px;
+}
+
+.products-title {
+    font-size: 50px;
+}
