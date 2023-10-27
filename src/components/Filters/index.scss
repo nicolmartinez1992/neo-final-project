@@ -1,0 +1,25 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+.filters__categories {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 40px 10px 40px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+
+.filters__item {
+    font-size: 30px;
+    cursor: pointer;
+}
