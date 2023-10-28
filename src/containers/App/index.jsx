@@ -6,6 +6,7 @@ import Home from 'Containers/Home';
 import Login from 'Components/Login';
 import Layout from 'Components/Layout';
 import Filters from 'Components/Filters';
+import ProductDetails from 'Components/ProductDetails';
 
 const App = () => (
   <BrowserRouter>
@@ -13,7 +14,10 @@ const App = () => (
       <Route path={ROUTES.home} element={<Layout />}>
         <Route path={ROUTES.home} element={<Filters />}>
           <Route index element={<Home />} />
+          <Route path={ROUTES.product} element={<ProductDetails />} />
         </Route>
+        <Route index element={<Home />} />
+        <Route path={ROUTES.product} element={<ProductDetails />} />
       </Route>
       <Route path={ROUTES.login} element={<Login />} />
     </Routes>

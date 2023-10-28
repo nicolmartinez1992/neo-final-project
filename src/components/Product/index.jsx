@@ -3,7 +3,7 @@ import * as React from 'react';
 import './index.scss';
 import { Link } from 'react-router-dom';
 
-const Card = ({ image, title, price, category }) => (
+const Card = ({ id, image, title, price, category }) => (
   <div className="card">
     <div className="card__image-container">
       <img className="card__image" src={image} alt="" />
@@ -14,13 +14,16 @@ const Card = ({ image, title, price, category }) => (
       <p>Category: {category}</p>
     </div>
     <div className="card__button-container">
-      <Link className="card__button">Details</Link>
+      <Link to={`product/${id}`} className="card__button">
+        Details
+      </Link>
     </div>
   </div>
 );
 
 Card.propTypes = {
   category: PropTypes.string,
+  id: PropTypes.string,
   image: PropTypes.string,
   price: PropTypes.number,
   title: PropTypes.string,
