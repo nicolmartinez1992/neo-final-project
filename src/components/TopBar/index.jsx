@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './index.scss';
 
 const TopBar = () => {
   const [username, setUsername] = useState();
+  const { id } = useParams();
 
   useEffect(() => {
     const user = localStorage.getItem('usuario');
@@ -30,7 +31,7 @@ const TopBar = () => {
         <Link className="list-item" to="">
           <ShoppingCartIcon />
         </Link>
-        <Link className="list-item" to="#">
+        <Link className="list-item username" to={`users/${id}`}>
           {username}
         </Link>
       </div>
