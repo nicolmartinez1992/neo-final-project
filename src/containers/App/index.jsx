@@ -8,6 +8,7 @@ import Layout from 'Components/Layout';
 import Filters from 'Components/Filters';
 import ProductDetails from 'Components/ProductDetails';
 import Profile from 'Components/Profile';
+import Cart from 'Components/Cart';
 
 const App = () => (
   <BrowserRouter>
@@ -20,6 +21,7 @@ const App = () => (
         <Route index element={<Home />} />
         <Route path={ROUTES.product} element={<ProductDetails />} />
         <Route path={ROUTES.profile} element={<Profile />} />
+        <Route path={ROUTES.cart} element={<Cart />} />
       </Route>
       <Route path={ROUTES.login} element={<Login />} />
     </Routes>

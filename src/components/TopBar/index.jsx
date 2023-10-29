@@ -28,7 +28,7 @@ const TopBar = () => {
         <Link className="list-item" to="">
           Send Gift
         </Link>
-        <Link className="list-item" to="">
+        <Link className="list-item" to={`carts/${id}`}>
           <ShoppingCartIcon />
         </Link>
         <Link className="list-item username" to={`users/${id}`}>
