@@ -26,6 +26,11 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details">
+      <div className="product-details__button-container">
+        <Link className="product-details__button" to="/">
+          {'< Back'}
+        </Link>
+      </div>
       <div className="product-details__container">
         <div className="product-details__image-container">
           <img
@@ -36,16 +41,13 @@ const ProductDetails = () => {
         </div>
         <div className="product-details__info">
           <h2>{title}</h2>
-          <p>Category: {category}</p>
+          <div className="product-details__category-container">
+            <p className="product-details__category">{category}</p>
+          </div>
           <p>
             Description:{' '}
             {description ? description.toLowerCase() : ''}
           </p>
-        </div>
-        <div className="product-details__button-container">
-          <Link to="/cart" className="product-details__button">
-            ADD
-          </Link>
         </div>
       </div>
     </div>
