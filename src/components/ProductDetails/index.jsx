@@ -8,17 +8,15 @@ const ProductDetails = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
 
-  useEffect(
-    () =>
-      getProduct(id)
-        .then((response) => {
-          setProduct(response.data);
-        })
-        .catch((error) => {
-          console.log('Error retrieving product', error);
-        }),
-    [],
-  );
+  useEffect(() => {
+    getProduct(id)
+      .then((response) => {
+        setProduct(response.data);
+      })
+      .catch((error) => {
+        console.log('Error retrieving product', error);
+      });
+  }, []);
 
   console.log(product);
 

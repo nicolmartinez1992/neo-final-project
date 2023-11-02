@@ -14,7 +14,7 @@ const Card = ({ id, image, title, price, category }) => (
       <p>Category: {category}</p>
     </div>
     <div className="card__button-container">
-      <Link to={`product/${id}`} className="card__button">
+      <Link to={`/product/${id}`} className="card__button">
         Details
       </Link>
     </div>
