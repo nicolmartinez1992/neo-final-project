@@ -1,0 +1,29 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(220, 219, 219);
+}
+
+.cart__container {
+    margin-top: 30px;
+}
+
+.cart__title {
+    font-family: sans-serif;
+    font-size: 35px;
+}
+
+.cart__button-container {
+    margin: 10px 0px 20px 0px
+}
+.cart__button {
+    width: 200px;
+    border-radius: 3px;
+    border: white;
+    font-size: 15px;
+    font-family: sans-serif;
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+}
