@@ -32,10 +32,11 @@ const Profile = () => {
               Email: {userData.email}
             </span>
             <span className="profile__data">
-              Street: {userData.adress ? userData.adress.street : ''}
+              Street:{' '}
+              {userData.address ? userData.address.street : ''}
             </span>
             <span className="profile__data">
-              City: {userData.adress ? userData.adress.city : ''}
+              City: {userData.address ? userData.address.city : ''}
             </span>
           </div>
           <div className="profile__data2">
@@ -46,11 +47,12 @@ const Profile = () => {
               Phone: {userData.phone}
             </span>
             <span className="profile__data">
-              Number: {userData.adress ? userData.adress.number : ''}
+              Number:{' '}
+              {userData.address ? userData.address.number : ''}
             </span>
             <span className="profile__data">
               Zip code:{' '}
-              {userData.adress ? userData.adress.zipcode : ''}
+              {userData.address ? userData.address.zipcode : ''}
             </span>
           </div>
         </div>
