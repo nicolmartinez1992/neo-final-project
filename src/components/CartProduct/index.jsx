@@ -18,10 +18,10 @@ const CartProduct = ({ price, quantity, image, title }) => {
           <div className="cart-product__details">
             <span className="cart-product__item">{quantity}</span>
             <span className="cart-product__item--white">X</span>
-            <span className="cart-product__item">${price}</span>
+            <span className="cart-product__item">US${price}</span>
             <span className="cart-product__item--white">=</span>
             <span className="cart-product__item">
-              ${price * quantity}
+              US${price * quantity}
             </span>
           </div>
         </div>
