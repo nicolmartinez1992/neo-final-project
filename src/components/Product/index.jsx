@@ -4,7 +4,7 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 
 const Card = ({ id, image, title, price, category }) => (
-  <div className="card">
+  <Link to={`/product/${id}`} className="card">
     <div className="card__image-container">
       <img className="card__image" src={image} alt="" />
     </div>
@@ -14,11 +14,9 @@ const Card = ({ id, image, title, price, category }) => (
       <p>Category: {category}</p>
     </div>
     <div className="card__button-container">
-      <Link to={`/product/${id}`} className="card__button">
-        Details
-      </Link>
+      <button className="card__button">ADD</button>
     </div>
-  </div>
+  </Link>
 );
 
 Card.propTypes = {
