@@ -1,0 +1,22 @@
+.gift-view {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+    font-family: sans-serif;
+}
+
+.gift-view__user-container {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.gift-view__button {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(220, 219, 219);
+    padding: 7px 20px;
+
+}

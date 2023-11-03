@@ -15,7 +15,7 @@ const TopBar = () => {
   return (
     <div className="top-bar-container">
       <div className="logo-container">
-        <Link>
+        <Link to="/">
           <img
             className="logo"
             src="https://img.freepik.com/vector-premium/logotipo-abstracto-letra-c-diseno-colorido-vector-3d_345408-876.jpg"
@@ -25,7 +25,7 @@ const TopBar = () => {
         <h1 className="topbar-title">Online shop</h1>
       </div>
       <div className="buttons-container">
-        <Link className="list-item" to="">
+        <Link className="list-item" to="/carts">
           Send Gift
         </Link>
         <Link className="list-item" to={`carts/${id}`}>
