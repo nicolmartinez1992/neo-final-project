@@ -8,12 +8,15 @@
     margin: 30px 30px 30px 30px;
     text-align: left;
     border-radius: 10px;
+    text-decoration: none;
+    cursor: auto;
+    color: black;
     &:hover {
         transform: scale(1.1);    }
 }
 
 .card__image-container {
-height: 150px;
+    height: 150px;
 }
 
 .card__image {
@@ -55,8 +58,7 @@ p {
     margin: 10px 0px 0px 10px;
     border: none;
     background-color: white;
-    font-weight: bold;
-    font-size: x-large;
+    font-size: large;
     color: black;
     cursor: pointer;
     padding: 5px;
