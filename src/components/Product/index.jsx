@@ -10,7 +10,7 @@ const Card = ({ id, image, title, price, category }) => (
     </div>
     <div className="card__content">
       <h2>{title}</h2>
-      <p>Price: US${price}</p>
+      <p>Price: US$ {price}</p>
       <p>Category: {category}</p>
     </div>
     <div className="card__button-container">

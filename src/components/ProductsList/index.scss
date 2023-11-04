@@ -1,15 +1,16 @@
-.container {
-    background-color: rgb(220, 219, 219);
+.products {
+    background-color: $background-color;
     text-align: center;
 }
 
-.products-container {
+.products__title {
+    font-size: 50px;
+}
+
+.products__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0px 20px 0px 20px;
 }
 
-.products-title {
-    font-size: 50px;
-}
