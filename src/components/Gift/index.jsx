@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import GiftView from 'Components/GiftView';
+import Loading from 'Components/Loading';
 import getUsers from '../../api/users';
 import './index.scss';
 import getCarts from '../../api/carts';
-import { Circles } from 'react-loader-spinner';
 
 const Gift = () => {
   const [users, setUsers] = useState([]);
@@ -49,19 +49,7 @@ const Gift = () => {
   return (
     <div className="gift">
       {loading ? (
-        <div className="gift__loading-container">
-          <span className="gift__loading-title">Loading...</span>
-          <Circles
-            className="gift__loading"
-            height="80"
-            width="80"
-            color="#000000"
-            ariaLabel="circles-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            marginTop="20px"
-          />
-        </div>
+        <Loading />
       ) : (
         <div className="gift__container">
           <h1 className="gift__title">Send a Gift to a friend!</h1>
