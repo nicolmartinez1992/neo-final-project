@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './index.scss';
 import { useParams } from 'react-router-dom';
 import Product from 'Components/Product';
+import Loading from 'Components/Loading';
 import getCategory from '../../api/category';
 import getProducts from '../../api/products';
-import { Circles } from 'react-loader-spinner';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -40,19 +40,7 @@ const Home = () => {
   return (
     <div className="home">
       {loading ? (
-        <div className="home__loading-container">
-          <span className="home__loading-title">Loading...</span>
-          <Circles
-            className="home__loading"
-            height="80"
-            width="80"
-            color="#000000"
-            ariaLabel="circles-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            marginTop="20px"
-          />
-        </div>
+        <Loading />
       ) : (
         <div className="home__view">
           <h1 className="home__title">
