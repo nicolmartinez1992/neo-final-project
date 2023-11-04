@@ -51,10 +51,10 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-container__border">
-        <h1 className="login-title">Login</h1>
-        <div className="input-container">
+    <div className="login">
+      <div className="login__container">
+        <h1 className="login__title">LOGIN</h1>
+        <div className="login__input-container">
           <input
             value={username}
             type="text"
@@ -68,8 +68,8 @@ const Login = () => {
             onChange={handlePassword}
           />
         </div>
-        <div className="button-container">
-          <button className="login-button" onClick={handleLogin}>
+        <div className="login__button-container">
+          <button className="login__button" onClick={handleLogin}>
             Log in
           </button>
           <ToastContainer />
