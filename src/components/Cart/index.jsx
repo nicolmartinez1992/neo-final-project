@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Circles } from 'react-loader-spinner';
 import CartProduct from 'Components/CartProduct';
+import Loading from 'Components/Loading';
 import getCart from '../../api/cart';
 import getProducts from '../../api/products';
 import './index.scss';
@@ -47,33 +47,19 @@ const Cart = () => {
   }, [id]);
 
   if (loading) {
-    return (
-      <div className="cart__loading-container">
-        <span className="cart__loading-title">Loading...</span>
-        <Circles
-          className="cart__loading"
-          height="80"
-          width="80"
-          color="#000000"
-          ariaLabel="circles-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-          marginTop="20px"
-        />
-      </div>
-    );
+    return <Loading />;
   }
 
   return (
     <div className="cart">
       {cart.length === 0 ? (
-        <div className="cart__empty-warn-container">
+        <div className="cart__warning-container">
           <img
-            className="cart__empty-warn-image"
+            className="cart__warning-image"
             src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-7359557-6024626.png"
             alt=""
           />
-          <Link to="/" className="cart__empty-warn-button">
+          <Link to="/" className="cart__warning-button">
             CONTINUE SHOPPING
           </Link>
         </div>
