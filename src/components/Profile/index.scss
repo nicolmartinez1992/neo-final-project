@@ -3,33 +3,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: rgb(220, 219, 219);
+    background-color: $background-color;
 }
 
 .profile__container {
-    width: auto;
+    width: 700px;
     height: auto;
     background-color: white;
     padding: 60px;
     border-radius: 5px;
     border-style: double;
+    border-color: $base-color;
     border-width: 7px;
-
+    margin: 40px 0px 20px 0px;
 }
 
 .profile__title {
-    font-family: sans-serif;
+    font-family: $base-font;
     font-size: 40px;
+    font-weight: bold;
+    color: $base-color;
 }
 
 .profile__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1000px;
     text-align: left;
     margin-top: 100px;
+    background-color: $base-color;
+    padding: 20px;
+    width: 100%;
+    color: white;
 }
 
 .profile__data1, .profile__data2 {
@@ -38,6 +43,6 @@
 }
 
 .profile__data {
-    font-family: sans-serif;
-    font-size: 30px;
+    font-family: $base-font;
+    font-size: 15px;
 }

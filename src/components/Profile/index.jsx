@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Circles } from 'react-loader-spinner';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Error from 'Components/Error';
+import Loading from 'Components/Loading';
 import getUser from '../../api/user';
 import './index.scss';
-import Error from 'Components/Error';
 
 const Profile = () => {
   const [userData, setUserData] = useState({});
@@ -30,22 +30,10 @@ const Profile = () => {
   return (
     <div className="profile">
       {loading ? (
-        <div className="profile__loading-container">
-          <span className="profile__loading-title">Loading...</span>
-          <Circles
-            className="profile__loading"
-            height="80"
-            width="80"
-            color="#000000"
-            ariaLabel="circles-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            marginTop="20px"
-          />
-        </div>
+        <Loading />
       ) : (
         <div className="profile__container">
-          <h1 className="profile__title">User Profile</h1>
+          <h1 className="profile__title">USER PROFILE</h1>
           <div className="profile__info">
             <div className="profile__data1">
               <span className="profile__data">
