@@ -13,25 +13,22 @@ const TopBar = () => {
   }, []);
 
   return (
-    <div className="top-bar-container">
-      <div className="logo-container">
-        <Link to="/">
-          <img
-            className="logo"
-            src="https://img.freepik.com/vector-premium/logotipo-abstracto-letra-c-diseno-colorido-vector-3d_345408-876.jpg"
-            alt="logo"
-          />
-        </Link>
-        <h1 className="topbar-title">Online shop</h1>
-      </div>
-      <div className="buttons-container">
-        <Link className="list-item" to="/carts">
+    <div className="topbar">
+      <Link to="/" className="topbar__title-container">
+        <h1 className="topbar__title">ONLINE SHOP</h1>
+      </Link>
+      <div className="topbar__items-container">
+        <Link className="topbar__item" to="/carts">
           Send Gift
         </Link>
-        <Link className="list-item" to={`carts/${id}`}>
+        <Link
+          className="topbar__item topbar__cart"
+          to={`carts/${id}`}>
           <ShoppingCartIcon />
         </Link>
-        <Link className="list-item username" to={`users/${id}`}>
+        <Link
+          className="topbar__item topbar__username"
+          to={`users/${id}`}>
           {username}
         </Link>
       </div>

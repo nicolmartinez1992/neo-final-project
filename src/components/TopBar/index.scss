@@ -1,45 +1,47 @@
-.top-bar-container {
+.topbar {
     display: flex;
     flex-direction: row;
     height: 100px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    background-color: $base-color;
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.topbar__title-container {
+    text-decoration: none;
 }
 
-.logo {
-    width: 100px;
-}
-
-.topbar-title {
-   color: black;
+.topbar__title {
+   color: white;
    font-size: 35px;
+   font-family: $base-font;
+   margin-left: 20px;
+   text-decoration: none;
 }
 
-.buttons-container {
+.topbar__items-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 500px;
 }
 
-.list-item{
+.topbar__item{
     cursor: pointer;
     text-decoration: none;
-    color:black;
-    font-size: 30px;
+    color:white;
+    font-size: 25px;
     font-weight: bold;
+    font-family: $base-font;
 }
 
-.username {
-    background-color: rgb(220, 219, 219);
+.topbar__cart {
+    margin-top: 5px;
+}
+
+.topbar__username {
+    background-color: white;
     padding: 10px;
     border-radius: 10px;
 }
