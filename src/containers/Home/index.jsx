@@ -24,6 +24,7 @@ const Home = () => {
           setLoading(false);
         });
     } else {
+      setLoading(true);
       getProducts()
         .then((response) => {
           setProducts(response.data);
