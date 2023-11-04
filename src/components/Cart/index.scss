@@ -1,3 +1,5 @@
+@import "../../theme/variables.scss";
+
 .cart {
     display: flex;
     flex-direction: column;
@@ -26,4 +28,40 @@
     background-color: white;
     padding: 5px;
     cursor: pointer;
+}
+
+.cart__loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.cart__loading-title {
+    margin: 10px 0px 30px 0px;
+    font-family: sans-serif;
+}
+
+.cart__empty-warn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.cart__empty-warn-button {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(112, 191, 222);
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+}
+
+.cart__empty-warn-image {
+    width: 300px;
 }
