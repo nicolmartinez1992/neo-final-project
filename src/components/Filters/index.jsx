@@ -12,14 +12,14 @@ const Filters = () => {
         setCategories(response.data);
       })
       .catch((error) => {
-        console.log('Error retrieving the users list', error);
+        console.log('Error retrieving data', error);
       });
   }, []);
 
   return (
     <div>
       <div className="filters">
-        <div className="filters__categories">
+        <div className="filters__categories-container">
           {categories.map((category) => (
             <Link
               to={`/category/${category}`}
