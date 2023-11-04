@@ -69,7 +69,9 @@ const Cart = () => {
             <CartProduct key={product.id} {...product} />
           ))}
           <div className="cart__button-container">
-            <button className="cart__button">Buy Cart</button>
+            <Link to="/" className="cart__button">
+              Buy Cart
+            </Link>
           </div>
         </div>
       )}
