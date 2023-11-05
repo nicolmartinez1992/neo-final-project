@@ -38,23 +38,36 @@ const Profile = () => {
             <div className="profile__data1">
               <span className="profile__data">
                 First Name:{' '}
-                {userData.name ? userData.name.firstname : ''}
+                {userData.name
+                  ? userData.name.firstname.charAt(0).toUpperCase() +
+                    userData.name.firstname.slice(1)
+                  : ''}
               </span>
               <span className="profile__data">
                 Email: {userData.email}
               </span>
               <span className="profile__data">
                 Street:{' '}
-                {userData.address ? userData.address.street : ''}
+                {userData.address
+                  ? userData.address.street.charAt(0).toUpperCase() +
+                    userData.address.street.slice(1)
+                  : ''}
               </span>
               <span className="profile__data">
-                City: {userData.address ? userData.address.city : ''}
+                City:{' '}
+                {userData.address
+                  ? userData.address.city.charAt(0).toUpperCase() +
+                    userData.address.city.slice(1)
+                  : ''}
               </span>
             </div>
             <div className="profile__data2">
               <span className="profile__data">
                 Last Name:{' '}
-                {userData.name ? userData.name.lastname : ''}
+                {userData.name
+                  ? userData.name.lastname.charAt(0).toUpperCase() +
+                    userData.name.lastname.slice(1)
+                  : ''}
               </span>
               <span className="profile__data">
                 Phone: {userData.phone}

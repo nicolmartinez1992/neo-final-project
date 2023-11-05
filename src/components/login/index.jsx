@@ -72,7 +72,7 @@ const Login = () => {
           </div>
           <div className="login__button-container">
             <button className="login__button" onClick={handleLogin}>
-              Log in
+              Login
             </button>
             <ToastContainer />
           </div>

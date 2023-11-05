@@ -4,7 +4,7 @@ import { Circles } from 'react-loader-spinner';
 
 const Loading = () => (
   <div className="loading">
-    <span className="loading__title">Loading...</span>
+    <span className="loading__title">Loading</span>
     <Circles
       className="loading__spinner"
       height="100"

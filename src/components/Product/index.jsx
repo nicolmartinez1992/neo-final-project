@@ -21,7 +21,7 @@ const Card = ({ id, image, title, price, category }) => (
 
 Card.propTypes = {
   category: PropTypes.string,
-  id: PropTypes.string,
+  id: PropTypes.number,
   image: PropTypes.string,
   price: PropTypes.number,
   title: PropTypes.string,
