@@ -3,26 +3,30 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import getProduct from '../../api/product';
 import './index.scss';
+import Loading from 'Components/Loading';
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
     getProduct(id)
       .then((response) => {
         setProduct(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log('Error retrieving product', error);
+        setLoading(false);
       });
   }, []);
 
-  console.log(product);
-
   const { title, image, description, category } = product || {};
 
-  return (
+  return loading ? (
+    <Loading />
+  ) : (
     <div className="product-details">
       <div className="product-details__button-container">
         <Link className="product-details__button" to="/">
