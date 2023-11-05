@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Menu from 'Components/DropdownMenu';
 import './index.scss';
+import getUsers from '../../api/users';
 
 const TopBar = () => {
   const [username, setUsername] = useState();
-  const { id } = useParams();
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const user = localStorage.getItem('usuario');
+    getUsers()
+      .then((response) => setUsers(response.data))
+      .catch((error) => {
+        console.log('Error retrieving data', error);
+      });
+    const user = localStorage.getItem('username');
     setUsername(user);
   }, []);
+
+  const loggedUser = users.find((data) => data.username === username);
+  const userId = loggedUser ? loggedUser.id : '';
 
   return (
     <div className="topbar">
@@ -23,14 +33,10 @@ const TopBar = () => {
         </Link>
         <Link
           className="topbar__item topbar__cart"
-          to={`carts/${id}`}>
+          to={`/carts/${userId}`}>
           <ShoppingCartIcon />
         </Link>
-        <Link
-          className="topbar__item topbar__username"
-          to={`users/${id}`}>
-          {username}
-        </Link>
+        <Menu username={username} id={userId} />
       </div>
     </div>
   );
