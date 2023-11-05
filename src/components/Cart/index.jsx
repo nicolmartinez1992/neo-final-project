@@ -5,6 +5,7 @@ import Loading from 'Components/Loading';
 import getCart from '../../api/cart';
 import getProducts from '../../api/products';
 import './index.scss';
+import cartImage from '../../assets/images/cart.png';
 
 const Cart = () => {
   const [products, setProducts] = useState([]);
@@ -56,8 +57,8 @@ const Cart = () => {
         <div className="cart__warning-container">
           <img
             className="cart__warning-image"
-            src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-7359557-6024626.png"
-            alt=""
+            src={cartImage}
+            alt="cart"
           />
           <Link to="/" className="cart__warning-button">
             CONTINUE SHOPPING
