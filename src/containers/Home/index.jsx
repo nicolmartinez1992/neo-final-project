@@ -5,6 +5,7 @@ import Product from 'Components/Product';
 import Loading from 'Components/Loading';
 import getCategory from '../../api/category';
 import getProducts from '../../api/products';
+import noProducts from '../../assets/images/products.png';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -36,6 +37,19 @@ const Home = () => {
         });
     }
   }, [category]);
+
+  if (!loading && products.length === 0) {
+    return (
+      <div className="home__no-products">
+        <h1 className="home__no-products-title">NO PRODUCTS FOUND</h1>
+        <img
+          className="home__no-products-image"
+          src={noProducts}
+          alt="no-products-found"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="home">
