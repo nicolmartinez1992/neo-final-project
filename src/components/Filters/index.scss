@@ -1,7 +1,10 @@
-.filters {
+.filters__container {
     display: flex;
     flex-direction: column;
     background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 
 .filters__categories-container {
@@ -16,4 +19,7 @@
     text-decoration: none;
     font-family: $base-font;
     color: $base-color;
+    &:hover {
+        opacity: 0.8;
+    }
 }

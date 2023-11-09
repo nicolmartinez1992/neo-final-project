@@ -14,8 +14,7 @@ const Filters = () => {
         setCategories(response.data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.log('Error retrieving data', error);
+      .catch(() => {
         setLoading(false);
       });
   }, []);
@@ -23,8 +22,8 @@ const Filters = () => {
   return loading ? (
     <Loading />
   ) : (
-    <div>
-      <div className="filters">
+    <div className="filters">
+      <div className="filters__container">
         <div className="filters__categories-container">
           {categories.map((category) => (
             <Link
