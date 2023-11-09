@@ -3,6 +3,7 @@ import './index.scss';
 import { useParams } from 'react-router-dom';
 import Product from 'Components/Product';
 import Loading from 'Components/Loading';
+import Error from 'Components/Error';
 import getCategory from '../../api/category';
 import getProducts from '../../api/products';
 import noProducts from '../../assets/images/products.png';
@@ -20,8 +21,7 @@ const Home = () => {
           setProducts(response.data);
           setLoading(false);
         })
-        .catch((error) => {
-          console.log('Error retrieving products', error);
+        .catch(() => {
           setLoading(false);
         });
     } else {
@@ -31,8 +31,7 @@ const Home = () => {
           setProducts(response.data);
           setLoading(false);
         })
-        .catch((error) => {
-          console.log('Error retrieving products', error);
+        .catch(() => {
           setLoading(false);
         });
     }
@@ -40,13 +39,8 @@ const Home = () => {
 
   if (!loading && products.length === 0) {
     return (
-      <div className="home__no-products">
-        <h1 className="home__no-products-title">NO PRODUCTS FOUND</h1>
-        <img
-          className="home__no-products-image"
-          src={noProducts}
-          alt="no-products-found"
-        />
+      <div className="home__error">
+        <Error title="NO PRODUCTS FOUND" image={noProducts} />
       </div>
     );
   }

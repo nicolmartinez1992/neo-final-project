@@ -1,3 +1,8 @@
+.home {
+  padding-top: 40px;
+  overflow: hidden;
+}
+
 .home__view {
   align-items: center;
   display: flex;
@@ -48,6 +53,10 @@
   color: $base-color;
   font-family: $base-font;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px;
   margin-bottom: 0px;
+}
+
+.home__error {
+  padding-top: 50px;
 }
