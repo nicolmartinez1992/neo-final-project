@@ -10,7 +10,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 15px;
+}
+
+.cart__warning-title {
+    font-family: $base-font;
+    font-size: 35px;
+    color: $base-color;
 }
 
 .cart__warning-image {
@@ -39,14 +45,19 @@
 .cart__button {
     border-radius: 3px;
     border: white;
-    font-size: 15px;
+    font-size: 20px;
     font-family: $base-font;
     font-weight: bold;
     background-color: $base-color;
     color: white;
-    padding: 5px 30px 5px 30px;
+    padding: 7px 60px 7px 60px;
     cursor: pointer;
     text-decoration: none;
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
-
+.cart__error {
+    padding-top: 30px;
+}
