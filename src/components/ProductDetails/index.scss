@@ -1,4 +1,8 @@
 .product-details {
+    padding-top: 50px;
+}
+
+.product-details__global-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -13,13 +17,14 @@
 }
 
 .product-details__button {
-    text-decoration: none;
     background-color: $base-color;
     padding: 5px 15px 5px 15px;
     border-radius: 5px;
     color: white;
     font-family: $base-font;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
 .product-details__container {
@@ -68,3 +73,6 @@
     font-weight: bold;
 }
 
+.product-details__error {
+    padding-top: 50px;
+}

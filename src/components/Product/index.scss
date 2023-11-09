@@ -9,11 +9,13 @@
     text-align: left;
     border-radius: 10px;
     text-decoration: none;
-    cursor: auto;
+    cursor: pointer;
     color: black;
+    transition: all 0.15s ease-in-out;
 
     &:hover {
-        transform: scale(1.1);    }
+        transform: scale(1.1);
+    }
 }
 
 .card__image-container {
@@ -69,4 +71,7 @@ p {
     background-color: $base-color;
     width: 100%;
     font-family: $base-font;
+    &:hover {
+        opacity: 0.8;
+    }
 }
