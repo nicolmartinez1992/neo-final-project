@@ -66,4 +66,9 @@ input {
     color: white;
     font-family: $base-font;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.login__error {
+    padding-top: 30px;
 }

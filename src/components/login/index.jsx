@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import Error from 'Components/Error';
 import getUsers from '../../api/users';
 import './index.scss';
 import 'react-toastify/dist/ReactToastify.css';
 import login from '../../assets/images/login.png';
+import errorImage from '../../assets/images/error.png';
 
 const Login = () => {
   const [users, setUsers] = useState([]);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,8 +20,8 @@ const Login = () => {
       .then((response) => {
         setUsers(response.data);
       })
-      .catch((error) => {
-        console.log('Error retrieving the users list', error);
+      .catch(() => {
+        setError(true);
       });
   }, []);
 
@@ -50,6 +53,14 @@ const Login = () => {
       notify();
     }
   };
+
+  if (error) {
+    return (
+      <div className="login__error">
+        <Error title="SOMETHING WENT WRONG" image={errorImage} />
+      </div>
+    );
+  }
 
   return (
     <div className="login">
