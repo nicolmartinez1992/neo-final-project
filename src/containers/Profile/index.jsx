@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Error from 'Components/Error';
 import Loading from 'Components/Loading';
+import Error from 'Components/Error';
 import getUser from '../../api/user';
 import './index.scss';
+import errorImage from '../../assets/images/error.png';
 
 const Profile = () => {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,14 +19,22 @@ const Profile = () => {
         setUserData(response.data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.log('Error retrieving user data', error);
+      .catch(() => {
         setLoading(false);
+        setError(true);
       });
   }, []);
 
+  if (error) {
+    return <Error title="SOMETHING WENT WRONG" image={errorImage} />;
+  }
+
   if (!userData) {
-    return <Error />;
+    return (
+      <div className="profile__error">
+        <Error title="THIS ID DOES NOT EXIST" image={errorImage} />
+      </div>
+    );
   }
 
   return (
