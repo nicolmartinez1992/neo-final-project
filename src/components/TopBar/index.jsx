@@ -20,7 +20,7 @@ const TopBar = () => {
   }, []);
 
   const loggedUser = users.find((data) => data.username === username);
-  const userId = loggedUser ? loggedUser.id : '';
+  const userId = loggedUser ? loggedUser.id : null;
 
   return (
     <div className="topbar">
@@ -28,15 +28,29 @@ const TopBar = () => {
         <h1 className="topbar__title">ONLINE SHOP</h1>
       </Link>
       <div className="topbar__items-container">
-        <Link className="topbar__item" to="/carts">
-          Send Gift
-        </Link>
-        <Link
-          className="topbar__item topbar__cart"
-          to={`/carts/${userId}`}>
-          <ShoppingCartIcon />
-        </Link>
-        <Menu username={username} id={userId} />
+        {username ? (
+          <div className="topbar__items">
+            <Link className="topbar__item" to="/carts">
+              Send Gift
+            </Link>
+            <Link
+              className="topbar__item topbar__cart"
+              to={`/carts/${userId}`}>
+              <ShoppingCartIcon />
+            </Link>
+          </div>
+        ) : (
+          ''
+        )}
+        {username ? (
+          <Menu username={username} id={userId} />
+        ) : (
+          <div className="topbar__profile">
+            <Link to="/login" className="topbar__profile-title">
+              Log in
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

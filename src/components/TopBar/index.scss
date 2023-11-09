@@ -1,11 +1,12 @@
 .topbar {
     display: flex;
-    flex-direction: row;
     height: 100px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     background-color: $base-color;
+    position: fixed;
+    z-index: 5;
 }
 
 .topbar__title-container {
@@ -25,6 +26,16 @@
     justify-content: space-evenly;
     align-items: center;
     width: 500px;
+    justify-content: end;
+
+}
+
+.topbar__items {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 60px;
 }
 
 .topbar__item{
@@ -34,6 +45,9 @@
     font-size: 25px;
     font-weight: bold;
     font-family: $base-font;
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .topbar__cart {
@@ -45,4 +59,22 @@
     color: $base-color;
     padding: 10px;
     border-radius: 10px;
+}
+
+.topbar__profile {
+    font-family: $base-font;
+    color: $base-color;
+    background-color: white;
+    font-weight: bold;
+    margin-right: 15px;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.topbar__profile-title {
+    text-decoration: none;
+    color: $base-color;
 }

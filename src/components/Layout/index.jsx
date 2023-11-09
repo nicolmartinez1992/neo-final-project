@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TopBar from 'Components/TopBar';
 import { Outlet, useNavigate } from 'react-router-dom';
+import './index.scss';
 
 const Layout = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
@@ -9,7 +10,7 @@ const Layout = () => {
   useEffect(() => {
     const user = localStorage.getItem('username');
     if (!user) {
-      navigate('/login');
+      navigate('/');
     } else {
       setLoggedInUser(user);
     }
@@ -18,7 +19,9 @@ const Layout = () => {
   return (
     <div>
       <TopBar />
-      <Outlet />
+      <div className="topbar__outlet">
+        <Outlet />
+      </div>
     </div>
   );
 };
