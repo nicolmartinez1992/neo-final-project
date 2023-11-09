@@ -19,5 +19,8 @@
     background-color: $base-color;
     padding: 7px 20px;
     border-radius: 5px;
+    &:hover {
+        opacity: 0.8;
+    }
 
 }

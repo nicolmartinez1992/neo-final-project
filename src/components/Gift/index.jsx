@@ -25,7 +25,9 @@ const Gift = () => {
             (user) => user.id === item.id,
           );
 
-          if (newUser) {
+          const loggedInUser = localStorage.getItem('username');
+
+          if (newUser && newUser.username !== loggedInUser) {
             return {
               ...newUser,
               firstname: item.firstname,
@@ -38,7 +40,6 @@ const Gift = () => {
         setCarts(filteredUsers.filter(Boolean));
         setLoading(false);
       } catch (error) {
-        console.log('Error retrieving data', error);
         setLoading(false);
       }
     };
