@@ -26,7 +26,7 @@ const Menu = ({ id, username }) => {
               Profile
             </li>
             <li className="menu__item" onClick={redirectToLogout}>
-              Logout
+              Log out
             </li>
           </ul>
         )}
