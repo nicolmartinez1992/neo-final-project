@@ -3,6 +3,7 @@
 export const ROUTES = {
   cart: 'carts/:id',
   category: 'category/:category',
+  error: '/404',
   gift: 'carts',
   home: '/',
   login: 'login',
